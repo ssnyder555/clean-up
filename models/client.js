@@ -1,8 +1,10 @@
-const mongoose     = require('mongoose');
-
-const cleintSchema = new mongoose.Schema({
-  title: String,
-  body:  String
+const mongoose      = require('mongoose');
+const cleanerSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  Job: String,
 });
 
 module.exports = mongoose.model('Client', clientSchema);
