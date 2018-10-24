@@ -2,17 +2,17 @@
 const express       = require('express');
 const app           = express();
 const bodyParser    = require('body-parser');
-const mthodOverride = require('multer');
+const methodOverride = require('method-override');
 const session       = require('express-session');
 
 // require our database
 require('./db/db');
 
 // require our middle-ware
-const cleanerContollers = require('./controllers/cleanerContollers');
-const clientControllers = require('./controllers/clientControllers');
+const cleanerContollers = require('./controllers/cleanerController');
+const clientControllers = require('./controllers/clientController');
 // If I get to Auth Controllers
-const authControllers   = require('./controllers/authControllers');
+const authControllers   = require('./controllers/authController');
 
 // session has to do with: being loged in for duration of time
 app.use(session ({

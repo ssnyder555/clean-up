@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const express  = require('express');
 const router   = express.Router();
 const Client   = require('../models/client');
-const Cleaners = requre('../models/cleaner');
+const Cleaners = require('../models/cleaner');
 const Auth     = require('../models/auth');
 
 // Find all Clients in Objects
@@ -38,7 +38,7 @@ router.get('/new', (req, res) => {
 });
 
 // Create New Client from Info Passed from Function Above
-router.get('/new', (req, res) => {
+router.get('/new',  async (req, res) => {
   try {
     const cleintCreated = await Client.create(req.body);
     console.log(clentCreated);
@@ -69,7 +69,7 @@ router.get('/:id', async (req, res) => {
       client: clientFound
     });
   } catch (err) {
-    res.send(err):
+    res.send(err)
   }
 });
 
@@ -116,4 +116,4 @@ try{
 }
 })
 
-module.exports = router; 
+module.exports = router;

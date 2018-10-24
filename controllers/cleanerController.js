@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const express  = require('express');
 const router   = express.Router();
-const Cleaner  = require('../models/cleaners');
+const Cleaner  = require('../models/cleaner');
 const Client   = require('../models/client');
 
 // find all types cleaned objects
@@ -89,4 +89,4 @@ router.put('/:id', async (req, res) => {
   }
 })
 
-mosule.exports = router;
+module.exports = router;
