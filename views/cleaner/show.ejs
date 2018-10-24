@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Cleaner Page</h1>
+    <%= cleaner.name %> </br>
+    <h3>Client</h3> </br>
+    <%= console.log(cleaner); %>
+    <% for (let i = 0;) i < cleaner.client.length; i++ ) { %>
+    <% cleaner.client[i].name  %> </br>
+    <% } %>
+
+    <h2>Hello</h2>
+    <form action="/cleaner/<%=cleaner.id%>?_method=DELETE" method="post">
+      <input type="submit" value="Finish Job">
+    </form>
+
+    <form action="/cleaner/<%=cleaner.id%>/edit" method="GET">
+      <input type="submit" value="Edit Job Information">
+    </form>
+
+  </body>
+  
+</html>

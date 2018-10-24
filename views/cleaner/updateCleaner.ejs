@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <% for ( let i = 0; i < cleaner.length; i++ ) { %>
+      <form action="/cleaner/<%=cleaner[i].id%>?_method=Put" method="post">
+      Cleaner # Name <input type="text" name="name"> </br>
+      </form>
+    <% } %>
+
+  </body>
+</html>
