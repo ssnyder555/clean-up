@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Cleaner Information</h1>
+    <%=cleaner.name%>
+
+    <form action="/cleaner/<%=cleaner.id%>?_method=put" method="post">
+      <input type="text" name="name">
+      <input type="submit" value="SUBMIT">
+    </form>
+
+  </body>
+</html>
