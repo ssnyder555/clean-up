@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Client: This is your Index Page</h1>
+    <li><a href="/auth/logout">Logout</a></li>
+    <form action="/client/clientS" method="POST">
+      <input type="text" name="name" placeholder="Search...">
+      <input type="submit" value="Submit">
+    </form> </br>
+
+    <ul>
+      <% for ( let i = 0; i < client.length; i++ ) { %>
+          <li>
+
+          <%= client[i].name %> </br>
+
+          <form action="/client/<%=client[i].id%>" method="GET">
+          <input type="submit" name="" value="View Job">
+          </form>
+          </li>
+          <% } %>
+    </ul>
+
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Client Information</h1>
+    <%=client.name%> </br>
+
+    <form action="/client/<%=client.id%>/edit" method="GET">
+      <input type="submit" value="Edit Job Information">
+    </form>
+    <form action="/client/<%=client.id%>?_method=DELETE" method="post">
+      <input type="submit" value="Finish Job">
+
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <% for ( let i = 0; i < client.length; i++ ) { %>
+      <li>
+      <%= client[i].name %> </br>
+      <form action="/client/new" method="get">
+      <input type="submit" value="New Job">
+      </form>
+      <form action="/client/<%=client[i].id%>" method="GET">
+      <input type="submit" name="" value="View Job">
+      </form>
+      </li>
+      <% } %>
+      
+
+
+  </body>
+</html>
