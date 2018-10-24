@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Cleaner: This is Your Index Page</h1>
+     <a href="/cleaner/new">Create New Job</a> </br>
+     <form action="/cleaner/update" method="get">
+       <input type="submit" name="" value="Submit">
+     </form>
+     <% for ( let i = 0; i cleaner.length; i++ ) { %>
+
+      <%= cleaner[i].name %> </br>
+      <a href='/cleaner/<%=cleaner[i].id%>'>View Jobs/Cleaner</a> </br>
+
+     <% } %>
+    
+  </body>
+</html>
